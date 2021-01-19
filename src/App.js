@@ -1,9 +1,10 @@
 import React from 'react'
-import {BrowserRouter, Route, } from 'react-router-dom'
+import {BrowserRouter, Route, Switch } from 'react-router-dom'
 import styled from 'styled-components'
 
 import AcercaDe from './componentes/AcercaDe'
 import Blog from './componentes/Blog'
+import Error404 from './componentes/Error404'
 import Header from './componentes/Header'
 import Inicio from './componentes/Inicio'
 import Post from './componentes/Post'
@@ -14,10 +15,13 @@ const App = () => {
     <ContenedorPrincipal>
      <Header />
       <Main>
+        <Switch>
       <Route path="/" exact={true} component={Inicio}/>
       <Route path="/blog" component={Blog} />
       <Route path="/post/:id" component={Post} />
       <Route path="/acerca-de" component={AcercaDe} />
+      <Route component={Error404}/>
+      </Switch>
       </Main>
     </ContenedorPrincipal>
     </BrowserRouter>

@@ -6,8 +6,8 @@ const Inicio = () => {
   return (
     
       <ContenedorInicio>
-        <h2>Pagina de Inicio</h2>
-        <p>Esta es la pagina principal de mi Blog</p>
+        <TituloInicio>Pagina de Inicio</TituloInicio>
+        <ParrafoInicio>Esta es la pagina principal de mi Blog</ParrafoInicio>
       </ContenedorInicio>
   )
     
@@ -15,6 +15,21 @@ const Inicio = () => {
 
 const ContenedorInicio =styled.div`
 color: #214151;
+border: 1px solid #f8dc81;
+padding:40px;
+`
+
+const TituloInicio = styled.h2`
+font-size:1.5rem;
+color: #214151;
+text-align:center;
+margin-bottom:20px;
+`
+
+const ParrafoInicio = styled.p`
+font-size:0.9rem;
+color:#214151;
+
 
 `
 export default Inicio
