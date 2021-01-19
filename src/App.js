@@ -6,6 +6,7 @@ import AcercaDe from './componentes/AcercaDe'
 import Blog from './componentes/Blog'
 import Header from './componentes/Header'
 import Inicio from './componentes/Inicio'
+import Post from './componentes/Post'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Main>
       <Route path="/" exact={true} component={Inicio}/>
       <Route path="/blog" component={Blog} />
+      <Route path="/post/:id" component={Post} />
       <Route path="/acerca-de" component={AcercaDe} />
       </Main>
     </ContenedorPrincipal>
